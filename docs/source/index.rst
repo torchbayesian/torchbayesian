@@ -1,21 +1,14 @@
 TorchBayesian
 =============
 
-Research-grade Bayesian deep learning tools for PyTorch.
-
-TorchBayesian provides parameter-level Bayesian reparameterization,
-flexible priors and variational posteriors, and uncertainty-aware
-training for arbitrary ``nn.Module`` architectures.
+One-line description.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Getting Started
+    :maxdepth: 2
+    :hidden:
 
-   installation
-   quickstart
-
-.. toctree::
-   :maxdepth: 2
-   :caption: API Reference
-
-   api
+    installation
+    getstarted
+    tutorials
+    api
+    about

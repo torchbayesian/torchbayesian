@@ -1,0 +1,208 @@
+html[data-theme="light"] {
+    --tb-bg: #FCFCFA;
+    --tb-surface: #FFFFFF;
+    --tb-surface-soft: #F7F6F3;
+    --tb-border: #E7E3DD;
+
+    --tb-text: #1F1F1C;
+    --tb-text-muted: #5F5A52;
+
+    --tb-button-primary-bg: #262626;
+    --tb-button-primary-text: #FFFFFF;
+
+    --tb-button-secondary-bg: #FFFFFF;
+    --tb-button-secondary-text: #1F1F1C;
+    --tb-button-secondary-border: #D8D2CA;
+
+    --tb-accent: #EE4C2C;
+    --tb-accent-soft: #F6D7D0;
+}
+
+html[data-theme="dark"] {
+    --tb-bg: #121212;
+    --tb-surface: #1B1B1A;
+    --tb-surface-soft: #222220;
+    --tb-border: #353330;
+
+    --tb-text: #F3F2EF;
+    --tb-text-muted: #C2BDB5;
+
+    --tb-button-primary-bg: #F6F6F6;
+    --tb-button-primary-text: #1A1A18;
+
+    --tb-button-secondary-bg: #1B1B1A;
+    --tb-button-secondary-text: #F3F2EF;
+    --tb-button-secondary-border: #4A4641;
+
+    --tb-accent: #EE4C2C;
+    --tb-accent-soft: #5A2C23;
+}
+
+.tb-home {
+    color: var(--tb-text);
+    padding-bottom: 2rem;
+}
+
+.tb-hero {
+    padding: 3rem 0 2.5rem 0;
+}
+
+.tb-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    color: var(--tb-text);
+    margin-bottom: 0.4rem;
+}
+
+.tb-subtitle {
+    font-size: 1.3rem;
+    color: var(--tb-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.tb-intro {
+    background: var(--tb-surface);
+    border: 1px solid var(--tb-border);
+    border-radius: 1rem;
+    padding: 1.25rem 1.4rem;
+    color: var(--tb-text);
+}
+
+.tb-intro p {
+    margin-bottom: 0.8rem;
+}
+
+.tb-intro ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.tb-intro li {
+    color: var(--tb-text-muted);
+}
+
+.tb-buttons {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tb-btn {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.tb-btn:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.tb-btn-primary {
+    background: var(--tb-button-primary-bg);
+    color: var(--tb-button-primary-text);
+    border: 1px solid transparent;
+}
+
+.tb-btn-primary:hover {
+    color: var(--tb-button-primary-text);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+.tb-btn-secondary {
+    background: var(--tb-button-secondary-bg);
+    color: var(--tb-button-secondary-text);
+    border: 1px solid var(--tb-button-secondary-border);
+}
+
+.tb-btn-secondary:hover {
+    color: var(--tb-button-secondary-text);
+    border-color: var(--tb-accent);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.tb-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tb-section-block {
+    background: var(--tb-surface-soft);
+    border: 1px solid var(--tb-border);
+    border-radius: 1.2rem;
+    padding: 1.6rem;
+}
+
+.tb-section-header {
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.tb-section-header h2 {
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: var(--tb-text);
+    margin: 0;
+}
+
+.tb-section-header::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    margin:0.7rem auto 0 auto;
+    background: var(--tb-accent-soft);
+    border-radius: 999px;
+}
+
+.tb-card {
+    display: block;
+    height: 100%;
+    background: var(--tb-surface);
+    border: 1px solid var(--tb-border);
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.tb-card:hover {
+    color: inherit;
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: var(--tb-accent);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.tb-card-body {
+    padding: 1.25rem;
+}
+
+.tb-card h3 {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: var(--tb-text);
+    margin-bottom: 0.45rem;
+}
+
+.tb-card p {
+    margin: 0;
+    color: var(--tb-text-muted);
+    line-height: 1.55;
+}
+
+@media (max-width: 991.98px) {
+    .tb-title {
+        font-size: 2.4rem;
+    }
+
+    .tb-hero {
+        padding-top: 2rem;
+    }
+}

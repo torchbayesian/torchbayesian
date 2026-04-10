@@ -1,10 +1,8 @@
 API Reference
 =============
 
-Core module
------------
+.. autosummary::
+   :toctree: generated
+   :recursive:
 
-.. automodule:: torchbayesian
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   torchbayesian

@@ -1,0 +1,122 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if pagename == "index" %}
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/index.css', 1) }}">
+  {% endif %}
+{% endblock extrahead %}
+
+{% block docs_main %}
+  {% if pagename == "index" %}
+    <div class="tb-home">
+
+      <section class="tb-hero">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <h1 class="tb-title">TorchBayesian</h1>
+              <p class="tb-subtitle">Uncertainty-aware models in PyTorch.</p>
+
+              <div class="tb-buttons">
+                <a class="tb-btn tb-btn-primary" href="{{ pathto('getstarted') }}">Get Started</a>
+                <a class="tb-btn tb-btn-secondary" href="{{ pathto('api') }}">Documentation</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="tb-intro">
+                <p>
+                  A lightweight library for Bayesian neural networks and uncertainty
+                  quantification, designed to integrate naturally with standard PyTorch workflows.
+                </p>
+                <ul>
+                  <li>PyTorch-native Bayesian modeling</li>
+                  <li>Minimal changes to existing <code>nn.Module</code> code</li>
+                  <li>Bayes by Backprop and MC Dropout</li>
+                  <li>Examples for regression, classification, and segmentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main class="container tb-sections">
+
+        <section class="tb-section-block">
+          <div class="tb-section-header">
+            <h2>Tutorials</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#regression">
+                <div class="tb-card-body">
+                  <h3>Regression</h3>
+                  <p>Predictive distributions and uncertainty intervals for continuous targets.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#classification">
+                <div class="tb-card-body">
+                  <h3>Classification</h3>
+                  <p>Uncertainty-aware prediction for classification tasks.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#segmentation">
+                <div class="tb-card-body">
+                  <h3>Segmentation</h3>
+                  <p>Dense prediction workflows with uncertainty-aware inference.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="tb-section-block">
+          <div class="tb-section-header">
+            <h2>Methods</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#bayes-by-backprop">
+                <div class="tb-card-body">
+                  <h3>Bayes by Backprop</h3>
+                  <p>Variational Bayesian inference through learned posterior distributions.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#monte-carlo-dropout">
+                <div class="tb-card-body">
+                  <h3>Monte Carlo Dropout</h3>
+                  <p>Stochastic inference for predictive uncertainty estimation.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="tb-card" href="{{ pathto('tutorials') }}#priors-and-posteriors">
+                <div class="tb-card-body">
+                  <h3>Priors and Posteriors</h3>
+                  <p>Flexible Bayesian parameterizations for uncertainty-aware models.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock docs_main %}
