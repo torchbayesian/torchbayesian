@@ -25,7 +25,7 @@ from torch import Tensor
 from torch.nn import Module, ModuleDict
 
 
-__all__ = ["register_reparametrization"]
+__all__ = ["Reparametrization", "register_reparametrization"]
 
 
 _cache_enabled = 0
