@@ -1,5 +1,5 @@
-torchbayesian.bnn.utils.enable\_mc\_dropout
-===========================================
+﻿enable\_mc\_dropout
+===================
 
 .. currentmodule:: torchbayesian.bnn.utils
 

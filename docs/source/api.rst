@@ -1,8 +1,9 @@
 API Reference
 =============
 
-.. autosummary::
-   :toctree: generated
-   :recursive:
+.. toctree::
+    :maxdepth: 1
 
-   torchbayesian
+    torchbayesian
+    torchbayesian_bnn
+    torchbayesian_bnn_utils

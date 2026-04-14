@@ -29,6 +29,7 @@ extensions = [
     "sphinx.ext.autodoc",           # Auto-doc
     "sphinx.ext.autosummary",       # Creates summaries
     "sphinx_design",                # Design stuff
+    "sphinx_copybutton",            # Code copy button
 ]
 
 templates_path = ['_templates']
@@ -71,3 +72,16 @@ html_show_sphinx = False
 
 # Do not show "Page source" option
 html_show_sourcelink = False
+
+# Left navigation sidebar
+html_sidebars = {
+    "**": ["search-field", "sidebar-nav-bs"],
+    "index": [],
+    "installation": [],
+    "getstarted": [],
+    "about": [],
+    "research": [],
+}
+
+# Browser tab icon
+html_favicon = "_static/favicon.ico"

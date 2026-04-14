@@ -1,8 +1,6 @@
 TorchBayesian
 =============
 
-One-line description.
-
 .. toctree::
     :maxdepth: 2
     :hidden:
@@ -11,4 +9,5 @@ One-line description.
     getstarted
     tutorials
     api
+    research
     about
