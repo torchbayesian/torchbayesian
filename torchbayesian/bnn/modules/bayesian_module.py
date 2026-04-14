@@ -71,8 +71,8 @@ class BayesianModule(Module):
         order to track the device and dtype of the module's parameters through internal calls to _apply so that the KL
         accumulator's device and dtype fit that of the module's parameters. Optional. Defaults to torch default device.
         It is recommended to use 'BayesianModule(...).to(device, dtype)' instead of this argument !
-    debug : bool
-        Whether to print debug messages. Defaults to False.
+    verbose : bool
+        Whether to print a message for each parameter being reparameterized. Defaults to False.
 
     Attributes
     ----------
@@ -106,7 +106,7 @@ class BayesianModule(Module):
             *,
             dtype: Optional[_dtype] = None,
             device: Device = None,
-            debug: bool = False
+            verbose: bool = False
     ) -> None:
         """
         Turns a module or model into a Bayesian neural network (BNN).
@@ -139,8 +139,8 @@ class BayesianModule(Module):
             in order to track the device and dtype of the module's parameters through internal calls to _apply so that
             the KL accumulator's device and dtype fit that of the module's parameters. Optional. Defaults to torch
             default device. It is recommended to use 'BayesianModule(...).to(device, dtype)' instead of this argument !
-        debug : bool
-            Whether to print debug messages. Defaults to False.
+        verbose : bool
+            Whether to print a message for each parameter being reparameterized. Defaults to False.
 
         Warning
         -------
@@ -174,9 +174,9 @@ class BayesianModule(Module):
                 owner_module_name, param_name = ("", name)
 
             # Register reparametrization to parameter
-            if debug:
+            if verbose:
                 print(
-                    f"Registering to module {module.get_submodule(owner_module_name)}'s parameter {param_name}..."
+                    f"Registering to parameter '{param_name}' of module '{module.get_submodule(owner_module_name)}'..."
                 )
             register_reparametrization(
                 module=module.get_submodule(owner_module_name),

@@ -6,4 +6,4 @@ from torchbayesian.bnn.utils.factories import (
     PosteriorFactory,
     PriorFactory
 )
-from torchbayesian.bnn.utils.reparametrize import register_reparametrization
+from torchbayesian.bnn.utils.reparametrize import Reparametrization, register_reparametrization

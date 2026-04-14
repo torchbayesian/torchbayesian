@@ -25,7 +25,7 @@ class Prior(ABC):
     Prior a child of 'nn.Module' similarly to 'bnn.VariationalPosterior'.
 
     Warning
-    -----
+    -------
     Subclasses of 'Prior' used in 'bnn.BayesianModule' must work with 'get_prior()'; their constructor ('__init__')
     method must accept arguments 'shape', 'dtype' and 'device'.
     """
